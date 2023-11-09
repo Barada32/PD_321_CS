@@ -27,7 +27,6 @@ namespace DataTypes
 			Console.WriteLine(5.5f.GetType());
 			Console.WriteLine(5.5m.GetType());	//m - Money
 
-			Convert
 		}
 	}
 }
