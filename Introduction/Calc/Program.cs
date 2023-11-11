@@ -11,7 +11,7 @@ namespace Calc
 		static void Main(string[] args)
 		{
 			Console.Write("Введие выражение: ");
-			string expression = "55+22+33/4-5*2*3+3";//Console.ReadLine();
+			string expression = "55+(22+33)/4-5*2*3+3";//Console.ReadLine();
 			expression = expression.Replace(".", ",");
 			Console.WriteLine(expression);
 			String[] numbers = expression.Split('+', '-', '*', '/');
