@@ -2,8 +2,13 @@
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIMbflJXWaYtf8XOwSeJeO2f
 
 TODO:
+1. При запуске программы в произвольном месте экрана появляется клеточка.
+   Эта клеточка перемещается по экрану в зависимости от нажатой клавиши.
+
+TODO:
 1. Решить все задачи из файла: https://github.com/okovtun/PD_321_CS/blob/master/Introduction/VariablesTask.pdf;
-2. В Solution 'Introduction' добавить проект 'Shooter', и в нем написать программу которая по нажатой клавише выводит действие:
+2. В Solution 'Introduction' добавить проект 'Shooter', и в нем написать программу которая DONE
+   по нажатой клавише выводит действие:
 	w - вперед
 	s - назад
 	a - влево
