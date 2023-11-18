@@ -2,6 +2,10 @@
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIMbflJXWaYtf8XOwSeJeO2f
 
 TODO:
+1. Сохранить группу в файл;		DONE
+2. Загрузить группу из файла;
+
+DONE:
 https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading
 1. В классе 'Point' написать метод ??? Distance(???), который возвращает расстояние до указанной точки;
 2. В классе 'Fraction' перегрузить оставшиеся арифметические операторы, и следующие операторы:
