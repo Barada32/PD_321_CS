@@ -2,8 +2,13 @@
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIMbflJXWaYtf8XOwSeJeO2f
 
 TODO:
+Реализовать иерархию геометрических фигур: круг, треугольник, квадрат, прямоугольник ...
+Для каждой фигуры вывести на экран ее первичные свойства, такие как длина стороны квадрата,
+радиус круга...., и вторичные свойства: площадь и периметр. Так же каждую фигуру нужно нарисовать.
+
+DONE:
 1. Сохранить группу в файл;		DONE
-2. Загрузить группу из файла;
+2. Загрузить группу из файла;	DONE
 
 DONE:
 https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading
