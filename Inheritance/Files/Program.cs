@@ -1,4 +1,5 @@
-﻿//#define WRITE_TO_FILE
+﻿#define WRITE_TO_FILE
+//#define READ_FROM_FILE
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,13 +30,16 @@ namespace Files
 			string cmd = directory + "\\" + filename;
 			System.Diagnostics.Process.Start("notepad", cmd); 
 #endif
+
+#if READ_FROM_FILE
 			StreamReader sr = new StreamReader("File.txt");
 			while (!sr.EndOfStream)
 			{
 				string buffer = sr.ReadLine();
 				Console.WriteLine(buffer);
 			}
-			sr.Close();
+			sr.Close(); 
+#endif
 		}
 	}
 }
