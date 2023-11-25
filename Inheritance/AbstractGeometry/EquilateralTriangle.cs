@@ -34,7 +34,7 @@ namespace AbstractGeometry
 		}
 		public override double GetPerimeter()
 		{
-			return Side*3;
+			return Side * 3;
 		}
 		public override void Draw(PaintEventArgs e)
 		{
@@ -46,6 +46,12 @@ namespace AbstractGeometry
 					new Point(StartX+(int)Side/2, StartY + (int)Side - (int)GetHeight())
 				};
 			e.Graphics.DrawPolygon(pen, points);
+			DrawHeight(e);
+		}
+		public override void DrawHeight(PaintEventArgs e)
+		{
+			Pen pen = new Pen(Color, 1);
+			e.Graphics.DrawLine(pen, StartX + (float)Side / 2, StartY + (float)Side, StartX + (float)Side / 2, (float)(StartY+Side-GetHeight()));
 		}
 		public override void Info(PaintEventArgs e)
 		{
