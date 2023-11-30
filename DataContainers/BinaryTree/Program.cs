@@ -34,6 +34,7 @@ namespace BinaryTree
 				//Delegate
 				//Signature - это прототип функции без возвращаемого значения
 				Console.WriteLine($"Максимальное значение в дереве:{tree.MaxValue()}");
+				TreePreformance<int>.Measure("Максимальное значение в дереве: ", tree.MaxValue, tree);
 				Console.WriteLine($"Сумма элементов дерева:{tree.Sum()}");
 				Console.WriteLine($"Количество элементов дерева:{tree.Count()}");
 				Console.WriteLine($"Среднее-арифметическое элементов дерева:{tree.Avarage()}");
