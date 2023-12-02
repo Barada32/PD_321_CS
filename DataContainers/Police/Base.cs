@@ -12,6 +12,10 @@ namespace Police
 	{
 		private Dictionary<LicencePlate, List<Crime>> police_base;
 		const string delimiter = "\n------------------------------------\n";
+		public Base()
+		{
+			this.police_base = new Dictionary<LicencePlate, List<Crime>>();
+		}
 		public Base(Dictionary<LicencePlate, List<Crime>> police_base)
 		{
 			this.police_base = new Dictionary<LicencePlate, List<Crime>>(police_base);
@@ -23,7 +27,7 @@ namespace Police
 				Console.WriteLine($"{i.Key}:\n");
 				foreach (Crime j in i.Value)
 				{
-					Console.WriteLine($"\t{j}");
+					Console.WriteLine($"\t{j.ToScreen()}");
 				}
 				Console.WriteLine(delimiter);
 			}
@@ -42,6 +46,22 @@ namespace Police
 			}
 			sw.Close();
 			System.Diagnostics.Process.Start("notepad", filename);
+		}
+		public void Load(string filename)
+		{
+			StreamReader sr = new StreamReader(filename);
+			while (!sr.EndOfStream)
+			{
+				string buffer = sr.ReadLine();
+				LicencePlate plate = new LicencePlate(buffer.Split(':')[0]);
+				buffer = buffer.Replace(plate + ":", "");
+				string[] crimes = buffer.Split(',');
+				crimes = crimes.Where(val => val != "").ToArray();
+				List<Crime> list_of_crimes = new List<Crime>();
+				foreach (string crime in crimes) list_of_crimes.Add(new Crime(crime));
+				police_base.Add(plate, list_of_crimes);
+			}
+			sr.Close();
 		}
 	}
 }

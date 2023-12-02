@@ -1,7 +1,7 @@
 ﻿https://github.com/okovtun/PD_321_CS.git
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIMbflJXWaYtf8XOwSeJeO2f
 
-TODO:
+DONE:
 Прочитать полицейскую базу из файла.
 
 TODO:
@@ -12,6 +12,7 @@ TODO:
 	??? DepthPrint(???);//Выводит все элементы дерева на заданной глубине
 	??? TreePrint(???);	//Выводит дерево как дерево
 2. Измерить производительность всех методов;
+	https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/
 
 DONE:
 Реализовать иерархию геометрических фигур: круг, треугольник, квадрат, прямоугольник ...

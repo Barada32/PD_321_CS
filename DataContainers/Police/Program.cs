@@ -1,4 +1,7 @@
-﻿using System;
+﻿//#define SAVE_CHECK
+#define LOAD_CHECK
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +26,7 @@ namespace Police
 			//Console.WriteLine(crime); 
 			#endregion
 
+#if SAVE_CHECK
 			Dictionary<LicencePlate, List<Crime>> police_base = new Dictionary<LicencePlate, List<Crime>>()
 			{
 				[new LicencePlate("m137nb")] = new List<Crime>()
@@ -70,7 +74,12 @@ namespace Police
 
 			Base @base = new Base(police_base);
 			@base.Print();
-			@base.Save("base.txt");
+			@base.Save("base.txt"); 
+#endif
+
+			Base @base = new Base();
+			@base.Load("Base.txt");
+			@base.Print();
 		}
 		const string delimiter = "\n------------------------------------\n";
 	}
