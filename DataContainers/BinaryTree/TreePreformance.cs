@@ -9,13 +9,15 @@ namespace BinaryTree
 {
 	class TreePreformance<T>
 	{
-		public static void Measure(string message, Delegate @delegate, Tree obj)
+		public delegate T Method();
+		public static void Measure(string message, Method method)
 		{
 			Stopwatch sw = new Stopwatch();
 			sw.Start();
-			Object value = @delegate.Method.Invoke(obj, null);
-			Console.WriteLine(value.ToString());
+			T value = method();
 			sw.Stop();
+			Console.WriteLine($"{message.PadRight(42)} {value.ToString().PadLeft(12)}, вычислено за {sw.Elapsed.ToString("ss\\.fffffff")} секунд.");
+			//https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-timespan-format-strings
 		}
 	}
 }
