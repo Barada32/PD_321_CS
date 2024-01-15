@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1082
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academy", "Academy\Academy.csproj", "{4983D787-8374-4514-8017-8BB7BA130798}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractClass", "AbstractClass\AbstractClass.csproj", "{713312F1-7137-4726-B22E-FC03FC77574A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractGeometry", "AbstractGeometry\AbstractGeometry.csproj", "{E5F6D5DB-AF30-4985-95BF-18153AD1DF4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accademy_2", "Accademy_2\Accademy_2.csproj", "{E9024FC9-1D6B-4718-A689-2D669790E5A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{E5F6D5DB-AF30-4985-95BF-18153AD1DF4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5F6D5DB-AF30-4985-95BF-18153AD1DF4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5F6D5DB-AF30-4985-95BF-18153AD1DF4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9024FC9-1D6B-4718-A689-2D669790E5A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9024FC9-1D6B-4718-A689-2D669790E5A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9024FC9-1D6B-4718-A689-2D669790E5A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9024FC9-1D6B-4718-A689-2D669790E5A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
