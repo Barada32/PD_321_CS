@@ -21,6 +21,9 @@ namespace Accademy_2
 			Teacher teacher = new Teacher("Walter", "White", 50, "Chemestry",20);
 			Console.WriteLine(teacher);
 			teacher.Info();
-		}
+			Graduate graduate = new Graduate("Hreder", "hank", 40, "Criminal", "OBN", 70, 40,"How to catch Hizenberg");
+			graduate.Info();
+            Console.WriteLine(graduate);
+        }
 	}
 }
