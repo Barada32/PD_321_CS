@@ -22,6 +22,13 @@ namespace Accademy_2
 			this.age = age;
 			Console.WriteLine("HumConstructor:\t" + GetHashCode()) ;
         }
+		public Human(Human other)//конструктор копирования
+		{
+			this.lastName = other.lastName;
+			this.firstName = other.firstName;
+			this.age = other.age;
+			Console.WriteLine("HCopyConstructor: "+GetHashCode()) ;
+		}	
 		/*_________________Деструктор________________*/
 		~Human() 
 		{

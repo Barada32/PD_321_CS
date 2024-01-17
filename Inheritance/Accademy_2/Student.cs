@@ -29,6 +29,25 @@ namespace Accademy_2
 			Attendance = attendance;
 			Console.WriteLine("StudConstructor:\t" + GetHashCode());
 		}
+
+		public Student
+			(Human human,//Через конструктор копирования
+			string speciality,string group, double rating, double attendance):base(human)
+		{
+			Speciality = speciality;
+			Group = group;
+			Rating = rating;
+			Attendance = attendance;
+			Console.WriteLine("StudConstructor:\t" + GetHashCode());
+		}
+		public Student(Student other) : base(other) 
+		{
+			this.Speciality = other.Speciality;
+			this.Group = other.Group;
+			this.Rating = other.Rating;
+			this.Attendance = other.Attendance;
+
+		}
 		/*________________Деструкторы________________*/
 		~Student() { Console.WriteLine("StudDestructor:\t" + GetHashCode()); }
 		/*________________Методы_____________________*/
