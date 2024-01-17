@@ -31,7 +31,14 @@ namespace Accademy_2
 		}
 		public override string ToString()//ovveride необходим для переопределения функции
 		{
-			return base.ToString() + $"{Speciality},{Expirience}  лет";
+			return base.ToString() + $",{Speciality},{Expirience}";
+		}
+
+		public override void Init(string[] values)
+		{
+			base .Init(values);
+			Speciality = values[4];
+			Expirience= Convert.ToInt32(values[5]);
 		}
 	}
 }

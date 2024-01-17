@@ -42,7 +42,13 @@ namespace Accademy_2
 
 		public override string ToString()//ovveride необходим для переопределения функции
 		{
-			return $"{lastName},{firstName},{age} лет, ";
+			return $"{lastName},{firstName},{age}";
+		}
+		public virtual void Init(string[] values) //virtrual необходим для переопределения поведения метода
+		{
+			lastName = values[1];
+			firstName = values[2];
+			age = Convert.ToInt32(values[3]);
 		}
 	}
 }

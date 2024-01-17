@@ -1,0 +1,5 @@
+Student:Ivan,Petrov,25 лет, Chemestry,ww2024,95,98
+Teacher:Walter,White,50 лет, Chemestry,20  лет
+Student:Vercetti,Tommy,30 лет, Thieth,Vice,98,99
+Graduate:Vercetti,Tommy,30 лет, Thieth,Vice,98,99 How to make money 
+Graduate:Rozenberg,Ken,30 лет, Lower,Vice,45,22 How to get money back
