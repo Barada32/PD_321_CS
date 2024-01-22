@@ -1,5 +1,5 @@
 ﻿//#define WRITE_TO_FILE
-//#define READ_FROM_FILE
+#define READ_FROM_FILE
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,9 +40,12 @@ namespace Accademy_2
 				new Graduate("Rozenberg","Ken",30,"Lower","Vice",45,22,"How to get money back")
 
 			};
-
 			Print(group);
 			Save(group, "groupfile.txt");
+#endif
+			Human[] group = Load("groupfile.txt");
+			Print(group);
+
 
 		}
 		public static void Print(Human[] group)
@@ -56,7 +59,7 @@ namespace Accademy_2
 		public static void Save(Human[] group, string filename)
 		{
 			//открытие и запись обьектов  в  файл group.txt по указанному пути
-			Directory.SetCurrentDirectory("..\\..\\files");
+			Directory.SetCurrentDirectory("..\\..");
 			StreamWriter sw = new StreamWriter(filename);
 			foreach (Human h in group)
 			{
@@ -66,11 +69,15 @@ namespace Accademy_2
 			sw.Close();
 
 			System.Diagnostics.Process.Start("notepad", $"{Directory.GetCurrentDirectory()}\\{filename}");
-#endif
-			//1:12:30
+
+			
+
 		}
+
 		public static Human[] Load(string filename)
 		{
+			Directory.SetCurrentDirectory("..\\..");
+			Console.WriteLine(Directory.GetCurrentDirectory());
 			List<Human> group = new List<Human>();
 			StreamReader sr = new StreamReader(filename);
 			while (!sr.EndOfStream)
@@ -79,12 +86,9 @@ namespace Accademy_2
 				string[] values = buffer.Split(':', ',', ';');
 				group.Add(HumanFactory(values[0]));
 				if (group.Last() == null) group.RemoveAt(group.Count - 1);
-				group.Last().Init(values);
-
+				else group.Last().Init(values);
 			}
 			sr.Close();
-
-
 			return group.ToArray();
 		}
 		public static Human HumanFactory(string type)
