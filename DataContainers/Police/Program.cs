@@ -74,7 +74,10 @@ namespace Police
 
 			Base @base = new Base(police_base);
 			@base.Print();
-			@base.Save("base.txt"); 
+			@base.Save("base.txt");
+		}
+	}
+}
 #endif
 
 			Base @base = new Base();
